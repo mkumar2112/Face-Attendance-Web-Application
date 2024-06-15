@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Contacts, EmployeeDetails, Attendance
 
 # Register your models here.
-# super user -> monu -> monu 
+
 
 class contactAdmin(admin.ModelAdmin):
     list_display=['First_Name', 'Email']

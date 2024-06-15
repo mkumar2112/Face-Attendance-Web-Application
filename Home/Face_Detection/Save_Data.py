@@ -39,28 +39,9 @@ def Attendence_True(Person_id):
                     )
                 except e:
                     print(e)
-            
-
-
-            # print('Updated')
     except Exception as e:
         print('Not Updated:', e)
 
 
 
 
-
-
-
-
-
-
-
-
-'''
-Attandence True:
-employee = EmployeeDetails.objects.get(Emp_id=20)
-employee.Today_Attendence = False
-employee.save()
-
-'''

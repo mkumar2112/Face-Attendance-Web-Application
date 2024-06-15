@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from .models import Contacts
 
 
+# Creating Contact Form
 class Contact_Form(forms.Form):
     First_Name = forms.CharField(label='First Name', max_length=50, required=True, widget=forms.TextInput(attrs={'placeholder': 'First Name'}) )
     Last_Name = forms.CharField(label='Last Name',max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Last Name'}))
@@ -27,9 +28,7 @@ class Contact_Form(forms.Form):
         )
         contact.save()
         return contact
-    # class Meta:
-    #     model = Contacts
-    #     fields = ["username", "email","password1", "password2"]
+
 
 
 # Creating Forms for create user...
@@ -52,6 +51,8 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ["username", "email", "password1", "password2"]
 
+
+# Add Employee Form format
 class AddEmployee(forms.Form):
     Name = forms.CharField(label='Name', max_length=50, required=True, widget=forms.TextInput(attrs={'placeholder': 'Name'}))
     Email = forms.EmailField(label='Email', max_length=254, required=True, widget=forms.TextInput(attrs={'placeholder': 'abc123@gmail.com'}))

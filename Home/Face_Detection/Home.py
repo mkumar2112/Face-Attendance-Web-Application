@@ -3,8 +3,7 @@ import sys
 sys.path.append('D:\Programing By Monu Kumar\Django Projects\FaceAttendence\Home\Face_Detection')
 from .Save_Data import Attendence_True
 from .Face_Recognition import Face_Recog
-import os
-import schedule
+
 
 
 
@@ -40,7 +39,6 @@ def Face_Attend(going_live=False):
             print("Can't receive frame (stream end?). Exiting ...")
             return False
 
-    # Release handle to the webcam
-    # video_capture.release()
+
     cv.destroyAllWindows()
 

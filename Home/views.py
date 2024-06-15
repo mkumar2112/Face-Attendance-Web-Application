@@ -7,9 +7,8 @@ from .Face_Detection.Home import Face_Attend
 from django.utils import timezone
 from django.contrib import messages
 
-# Monu@1234
 
-
+# Home Page
 def Home(request):
     return render(request, 'logouthome.html')
 
@@ -59,6 +58,7 @@ def logoutuser(request):
     logout(request) #pre-define Function
     return redirect('/Home') # return to home page
 
+# Add Employee Details
 @login_required(login_url='/Home')
 def Add_face_attendance(request):
     context = {}
@@ -82,12 +82,13 @@ def Add_face_attendance(request):
             )
             obj.save()
             print(obj)
-            # return redirect('Home')  # Redirect after POST to avoid re-submission
+            
     else:
         form = AddEmployee()
     context['form'] = form
     return render(request, 'add_face.html', context)
 
+# Today Present 
 @login_required(login_url='/Home')
 def Today_Present(request):
     Today_All_Present_object = Attendance.objects.filter(Date=timezone.now().date())
@@ -95,12 +96,13 @@ def Today_Present(request):
     return render(request, 'today_data.html', {'All': Today_All_Present_object})
 
 
-
+# All Present Attendance List
 @login_required(login_url='/Home')
 def All_Present(request):
     Today_All_Present_object = Attendance.objects.all()
     return render(request, 'total_data.html', {'All': Today_All_Present_object})
 
+# Contact page view
 @login_required(login_url='/Home')
 def contact(request):
     if request.method == 'GET':
@@ -119,7 +121,7 @@ def contact(request):
         # If the form is not valid, render the form with error messages
         return render(request, 'contact.html', {'form': form})
     
-
+# Start Camera for attendance
 @login_required(login_url='/Home')
 def face_attendance(request):
 

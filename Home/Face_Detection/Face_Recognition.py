@@ -1,5 +1,4 @@
 import face_recognition
-import os
 import sys
 sys.path.append('D:\Programing By Monu Kumar\Django Projects\FaceAttendence\Home\Face_Detection')
 import cv2
