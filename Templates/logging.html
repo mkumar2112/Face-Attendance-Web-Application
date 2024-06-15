@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+
+{% block 'content' %}
+
+{% comment %} {% load static %} {% endcomment %}
+
+<div class="main">
+  <div class="form-signin">
+<form method='post' action="{% url 'loginuser' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+      <h1 class="h3 mb-3 fw-normal" style="text-align:center;">SIGN IN</h1>
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <div class="form-floating">
+        <input type="text" class="form-control" name='user_n' id="floatingInput" placeholder="123abc890xyz">
+        <label for="floatingInput">User Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" name='passw' id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+    <div class='submission'>
+      <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    </div>
+
+      <a class="icon-link icon-link-hover" href="/createuser" >
+        Create User
+      </a>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock 'content' %}

@@ -1,0 +1,121 @@
+  <!-- Start Footer Area -->
+  <footer class="footer-area footer-eleven">
+    <!-- Start Footer Top -->
+    <div class="footer-top">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <!-- Single Widget -->
+              <div class="footer-widget f-about">
+                <div class="logo">
+                  <a href="index.html">
+                    <img src="/static/images/mkilogo.svg" alt="#" class="img-fluid" style="width: 50%;">       </a>
+                </div>
+                <p>
+                  Making the world a better place through constructing elegant
+                  hierarchies.
+                </p>
+                {% comment %} <p class="copyright-text">
+                  <span>© 2024 Ayro UI.</span>Designed and Developed by
+                  <a href="javascript:void(0)" rel="nofollow"> Ayro UI </a>
+                </p> {% endcomment %}
+              </div>
+              <!-- End Single Widget -->
+            </div>
+            <div class="col-lg-2 col-md-6 col-12">
+              <!-- Single Widget -->
+              {% comment %} <div class="footer-widget f-link">
+                <h5>Solutions</h5>
+                <ul>
+                  <li><a href="javascript:void(0)">Marketing</a></li>
+                  <li><a href="javascript:void(0)">Analytics</a></li>
+                  <li><a href="javascript:void(0)">Commerce</a></li>
+                  <li><a href="javascript:void(0)">Insights</a></li>
+                </ul>
+              </div> {% endcomment %}
+              <!-- End Single Widget -->
+            </div>
+            <div class="col-lg-2 col-md-6 col-12">
+              {% comment %} <!-- Single Widget -->
+              <div class="footer-widget f-link">
+                <h5>Support</h5>
+                <ul>
+                  <li><a href="javascript:voi~d(0)">Pricing</a></li>
+                  <li><a href="/static/javascript:void(0)">Documentation</a></li>
+                  <li><a href="javascript:void(0)">Guides</a></li>
+                  <li><a href="javascript:void(0)">API Status</a></li>
+                </ul>
+              </div>
+              <!-- End Single Widget --> {% endcomment %}
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ End Footer Top -->
+  </footer>
+  <!--/ End Footer Area -->
+
+	{% comment %} <div class="made-in-ayroui mt-4">
+		<a href="https://ayroui.com" target="_blank" rel="nofollow">
+		  <img style="width:220px" src="/static/images/ayroui.svg">
+		</a>
+	</div> {% endcomment %}
+
+  <a href="#" class="scroll-top btn-hover">
+    <i class="lni lni-chevron-up"></i>
+  </a>
+
+  <!--====== js ======-->
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/glightbox.min.js"></script>
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/tiny-slider.js"></script>
+
+  <script>
+
+    //===== close navbar-collapse when a  clicked
+    let navbarTogglerNine = document.querySelector(
+      ".navbar-nine .navbar-toggler"
+    );
+    navbarTogglerNine.addEventListener("click", function () {
+      navbarTogglerNine.classList.toggle("active");
+    });
+
+    // ==== left sidebar toggle
+    let sidebarLeft = document.querySelector(".sidebar-left");
+    let overlayLeft = document.querySelector(".overlay-left");
+    let sidebarClose = document.querySelector(".sidebar-close .close");
+
+    overlayLeft.addEventListener("click", function () {
+      sidebarLeft.classList.toggle("open");
+      overlayLeft.classList.toggle("open");
+    });
+    sidebarClose.addEventListener("click", function () {
+      sidebarLeft.classList.remove("open");
+      overlayLeft.classList.remove("open");
+    });
+
+    // ===== navbar nine sideMenu
+    let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
+
+    sideMenuLeftNine.addEventListener("click", function () {
+      sidebarLeft.classList.add("open");
+      overlayLeft.classList.add("open");
+    });
+
+    //========= glightbox
+    GLightbox({
+      'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
+      'type': 'video',
+      'source': 'youtube', //vimeo, youtube or local
+      'width': 900,
+      'autoplayVideos': true,
+    });
+
+  </script>
+</body>
+
+</html>

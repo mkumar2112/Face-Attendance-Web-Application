@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+
+{% block 'content' %}
+
+{% load static %}
+
+<div class="main"  action='loggedIn/contact' enctype="multipart/form-data"~>
+        <div class="register-form" >
+                <form method="post" action="{% url 'ContactUs' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="submission">
+                          <button class="btn btn-primary w-100 py-2" type="submit">Sign Up</button>
+                        </div>
+                      </form>
+        </div>
+</div>
+
+
+{% endblock 'content' %}

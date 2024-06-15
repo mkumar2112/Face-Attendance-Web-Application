@@ -1,0 +1,102 @@
+.center {
+    margin-left: 300px; /* This will center the div horizontally */
+    margin-top: 150px; /* This will center the div horizontally */
+    margin-bottom: 150px; /* This will center the div horizontally */
+    width: 50%; /* Set the width of the div */
+    border: 1px solid rgb(2, 0, 0); /* Just for visualization */
+    text-align:right;
+    padding: 20px; /* Add some padding for better visibility */
+}
+
+div.main {
+    margin-left: 10px; /* This will center the div horizontally */
+    margin-top: 130px; /* This will center the div horizontally */
+    margin-bottom: 20px; /* This will center the div horizontally */
+    text-align:left;
+    padding: 20px; /* Add some padding for better visibility */
+}
+
+
+.form-signin{
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-bottom: 100px;
+    width:700px;
+    border: 3px solid rgb(2, 0, 0);
+    padding: 20px;
+}
+
+.form-control {
+    margin-top: 30px;
+    margin-left: 250px;
+    width: 400px;
+}
+
+.submission{
+    margin-top: 40px;
+    margin-left: 500px;
+    margin-bottom: 300px;
+    width: 150px;
+
+}
+
+
+
+/* styles.css */
+.register-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 400px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #28b676;
+}
+
+.register-form label {
+    width: 300px;
+}
+.register-form .helptext {
+    margin-left: 355px;
+}
+
+
+.header-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 640px; /* Set maximum width for the video */
+    margin: 0 auto; /* Center the video horizontally */
+  }
+
+#videoElement {
+    width: 100%;
+    height: auto;
+  }
+
