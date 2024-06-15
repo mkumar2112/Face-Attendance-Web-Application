@@ -7,9 +7,8 @@ import os
 import schedule
 
 
-
+# Add Here the folder path
 face_cap = cv.CascadeClassifier('Home\Face_Detection\Data_For_Detection\haarcascade_frontalface_default.xml')
-# Save_Info = Save_Person_Info()
 
 # Initialize some variables
 process_this_frame = True
@@ -20,10 +19,11 @@ def Attend_True(pid):
     Attendence_True(pid)
 
 def Face_Attend(going_live=False):
+    # For Laptop web cam
     video_capture = cv.VideoCapture(0)
-    # video_capture = qqqqqcv.VideoCapture('http://172.16.2.7:4747/video')
+    # For droid web cam
+    # video_capture = cv.VideoCapture('http://172.16.2.7:4747/video')
     while going_live:
-        # schedule.run_pending()
         ret, frame = video_capture.read()
         if ret:
             known_face_encodings, known_face_names = Face_Recognition.load_data()
@@ -41,6 +41,5 @@ def Face_Attend(going_live=False):
             return False
 
     # Release handle to the webcam
-    # video_capture.release()
     cv.destroyAllWindows()
 
